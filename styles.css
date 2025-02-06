@@ -1,16 +1,89 @@
+/* Definindo as variáveis de cores */
+:root {
+    --cor-primaria: #4A90E2; /* Azul profissional */
+    --cor-secundaria: #50E3C2; /* Verde-água tecnológico */
+    --cor-fundo: #F8F9FA; /* Cinza claro neutro */
+    --cor-texto: #2D3436; /* Preto suavizado */
+    --cor-borda: #E0E0E0; /* Borda suave */
+    --cor-hover: #3E8BB5; /* Cor escurecida para hover */
+    --cor-foco: #4A90E2; /* Cor para foco nos inputs */
+}
+
+/* Corpo da página */
 body {
     font-family: Arial, sans-serif;
-    margin: 20px;
+    margin: 0;
     padding: 0;
+    background-color: var(--cor-fundo); /* Usando cor de fundo */
+    color: var(--cor-texto); /* Cor do texto */
+    line-height: 1.6;
 }
 
+/* Estilizando o formulário */
 form {
     width: 300px;
+    margin: 40px auto; /* Centralizando o formulário */
     display: flex;
     flex-direction: column;
+    background-color: #FFFFFF; /* Fundo branco para o formulário */
+    padding: 20px;
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombras suaves */
 }
 
+/* Estilizando os inputs, textarea e botão */
 input, textarea, button {
     margin-top: 10px;
-    padding: 8px;
+    padding: 10px;
+    border-radius: 4px; /* Bordas arredondadas */
+    border: 1px solid var(--cor-borda); /* Borda suave */
+    font-size: 14px;
+    transition: all 0.3s ease; /* Transição suave */
+}
+
+/* Efeito de foco nos inputs */
+input:focus, textarea:focus {
+    border-color: var(--cor-foco); /* Cor da borda no foco */
+    outline: none; /* Remover contorno padrão */
+}
+
+/* Estilo do botão principal */
+button {
+    background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria)); /* Gradiente de cor primária para secundária */
+    color: white; /* Texto branco no botão */
+    cursor: pointer;
+    border: none; /* Remover borda padrão */
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px; /* Bordas arredondadas */
+    transition: all 0.3s ease; /* Transição suave */
+}
+
+/* Efeito de hover no botão */
+button:hover {
+    background: linear-gradient(135deg, darken(var(--cor-primaria), 15%), darken(var(--cor-secundaria), 15%)); /* Escurece o gradiente no hover */
+}
+
+/* Estilo das labels */
+label {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--cor-texto); /* Cor suave para texto da label */
+    transition: color 0.3s ease; /* Transição suave */
+}
+
+/* Adicionando estilo para mensagens de erro ou destaque */
+.error-message {
+    color: #E74C3C; /* Vermelho para mensagens de erro */
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Estilo para inputs e textarea desabilitados */
+input:disabled, textarea:disabled {
+    background-color: #F0F0F0; /* Cor de fundo desabilitado */
+    cursor: not-allowed;
+    border-color: #D3D3D3; /* Cor de borda para inputs desabilitados */
 }
