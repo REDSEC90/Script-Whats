@@ -1,0 +1,32 @@
+whatsapp-automation/
+│── backend/
+│   │── python-api/
+│   │   │── app.py              # Lógica principal da API em Python
+│   │   │── database.py         # Conexão e manipulação do banco de dados
+│   │   │── models/
+│   │   │   ├── __init__.py
+│   │   │   ├── message.py      # Modelo de mensagens no banco de dados
+│   │   │── routes/
+│   │   │   ├── __init__.py
+│   │   │   ├── messages.py     # Rotas da API para envio/recebimento de mensagens
+│   │   │── services/
+│   │   │   ├── whatsapp.py     # Comunicação com WhatsApp (Twilio, Selenium, etc.)
+│   │   ├── requirements.txt    # Dependências do Python
+│   │── php-execution/
+│   │   │── send.php            # Script PHP para envio de mensagens
+│   │   │── .env                # Configuração de variáveis de ambiente
+│   │   │── vendor/             # Dependências do Composer
+│   │   │── composer.json       # Dependências do PHP
+│── frontend/
+│   │── public/
+│   │   │── index.html          # Interface do usuário
+│   │   │── script.js           # Código JavaScript para interações no frontend
+│   │   │── styles.css          # Estilos da página
+│   │── src/
+│   │   │── api.js              # Comunicação do frontend com a API
+│── config/
+│   │── docker-compose.yml      # Configuração para rodar o projeto em containers
+│   │── nginx.conf              # Configuração do Nginx (caso precise de proxy reverso)
+│   │── .env                    # Configurações globais do projeto
+│── README.md                   # Documentação do projeto
+│── .gitignore                   # Arquivos a serem ignorados pelo Git
