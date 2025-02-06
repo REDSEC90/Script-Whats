@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automação de WhatsApp</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2>Automação de Mensagens no WhatsApp</h2>
+    <form id="messageForm">
+        <label for="phone">Número do WhatsApp:</label>
+        <input type="tel" id="phone" name="phone" placeholder="+55XXXXXXXXXXX" required>
+
+        <label for="message">Mensagem:</label>
+        <textarea id="message" name="message" maxlength="500" required></textarea>
+
+        <label for="repeat">Número de Repetições:</label>
+        <input type="number" id="repeat" name="repeat" min="1" value="1">
+
+        <label for="schedule">Agendamento (Opcional):</label>
+        <input type="datetime-local" id="schedule" name="schedule">
+
+        <button type="submit">Enviar Mensagem</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
