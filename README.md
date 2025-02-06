@@ -62,3 +62,13 @@ Copie a chave exibida.
 Vá para GitHub > Settings > SSH and GPG Keys.
 
 Clique em New SSH key
+
+##usando o comando gh do github
+
+##diferente do "git" o "gh" tem funcoes extras e um pouco diferentes.
+
+##faz login na sua conta.
+
+gh auth login
+
+##cria um issue
